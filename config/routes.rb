@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :devices
+
   root to: 'top#index'
   devise_for :users, controllers: { omniauth_callbacks: 'authentication' }
   devise_scope :user do

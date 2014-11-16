@@ -1,0 +1,21 @@
+= form_for @device do |f|
+  - if @device.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@device.errors.count, "error")} prohibited this device from being saved:"
+      ul
+        - @device.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :user_id
+    = f.number_field :user_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :deviceid
+    = f.text_field :deviceid
+  .field
+    = f.label :clientkey
+    = f.text_field :clientkey
+  .actions = f.submit 'Save'
