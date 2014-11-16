@@ -1,0 +1,10 @@
+.jumbotron
+  .content
+    .text-center
+      h1 Title
+      h2 Sub Title
+      = form_tag user_omniauth_authorize_path(DotenvConfig.omniauth_provider), :method => 'post' do |f|
+        button.btn.btn-primary.btn-large
+          span.glyphicon.glyphicon-log-in
+          = t(:button_sign_in)
+
