@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :infrareds do
+    member do
+      post "post", action: 'post', as: :post
+    end
+  end
+
   resources :devices
 
   root to: 'top#index'

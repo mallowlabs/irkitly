@@ -11,13 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141116125232) do
+ActiveRecord::Schema.define(version: 20141116134054) do
 
   create_table "devices", force: true do |t|
     t.integer  "user_id"
     t.string   "name"
     t.string   "deviceid"
     t.string   "clientkey"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "infrareds", force: true do |t|
+    t.integer  "device_id"
+    t.string   "name"
+    t.string   "schedule"
+    t.text     "json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

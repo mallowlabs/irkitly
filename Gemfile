@@ -51,3 +51,9 @@ gem "omniauth-github"
 gem "dotenv-rails"
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "thin"
+
+gem 'heroku-rack-ssl-enforcer-rails'
+gem 'chrono_cross', :github => 'mallowlabs/chrono_cross'
+gem 'faraday'
+
+

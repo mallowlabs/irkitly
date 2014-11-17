@@ -1,5 +1,8 @@
 h1 New device
 
-== render 'form'
+h4 Put your ~/.irkit.json
+= form_tag(devices_path, method: 'post')
+  = text_area_tag :json, nil, class: 'form-control', rows: 10
+  = submit_tag 'Save', class: 'btn btn-primary'
 
 = link_to 'Back', devices_path

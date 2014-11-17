@@ -4,7 +4,7 @@ class DevicesController < ApplicationController
   respond_to :html
 
   def index
-    @devices = Device.all
+    @devices = current_user.devices
     respond_with(@devices)
   end
 
@@ -13,15 +13,22 @@ class DevicesController < ApplicationController
   end
 
   def new
-    @device = Device.new
-    respond_with(@device)
+#    @device = Device.new
+#    respond_with(@device)
   end
 
   def edit
   end
 
   def create
-    @device = Device.new(device_params)
+    irkitJson = IrkitJson.new(params[:json])
+    @device = Device.new(irkitJson.device)
+    @device.user = current_user
+    @device.infrareds = irkitJson.infrareds.map do |ir|
+      infrared = Infrared.new(ir)
+      infrared.save
+      infrared
+    end
     @device.save
     respond_with(@device)
   end

@@ -1,0 +1,2 @@
+module InfraredsHelper
+end
