@@ -1,7 +1,9 @@
 class Infrared < ActiveRecord::Base
+  include InfraredChronoCross
   belongs_to :device
 
   def post
+puts 'post'
     conn = Faraday.new(url: 'https://api.getirkit.com') do |builder|
       builder.request  :url_encoded
       builder.response :logger

@@ -41,6 +41,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem "rspec-rails"
+  gem "quiet_assets"
 end
 
 gem "slim-rails"
@@ -55,5 +56,4 @@ gem "thin"
 gem 'heroku-rack-ssl-enforcer-rails'
 gem 'chrono_cross', :github => 'mallowlabs/chrono_cross'
 gem 'faraday'
-
 
