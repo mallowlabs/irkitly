@@ -6,7 +6,7 @@ IRKitly
 Overview
 -------------------------------
 
-A web interface for [IRKit](http://getirkit.com/)
+A web interface for [IRKit](http://getirkit.com/).
 
 Setup
 -------------------------------
@@ -46,8 +46,8 @@ See [config/initializers/devise.rb](https://github.com/codefirst/vertex/blob/mas
 
 Usage
 -------------------------------
-You can generate .irkit.json with [irkit gem](http://rubygems.org/gems/irkit).
-And you can put .irkit.json to IRKitly.
+Generate .irkit.json with [irkit gem](http://rubygems.org/gems/irkit).
+And put .irkit.json to IRKitly.
 
 License
 -------------------------------
