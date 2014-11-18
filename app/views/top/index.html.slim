@@ -1,8 +1,8 @@
 .jumbotron
   .content
     .text-center
-      h1 Title
-      h2 Sub Title
+      h1 IRKitly
+      h2 A web interface for IRKit
       = form_tag user_omniauth_authorize_path(DotenvConfig.omniauth_provider), :method => 'post' do |f|
         button.btn.btn-primary.btn-large
           span.glyphicon.glyphicon-log-in

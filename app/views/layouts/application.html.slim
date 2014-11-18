@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Irkitly
+    title IRKitly
     = stylesheet_link_tag 'application', media: 'all'
     = favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '114x114'
     = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '72x72'
@@ -14,7 +14,7 @@ html
     nav.navbar.navbar-fixed-top.navbar-inverse role='navigation'
       .container
         .navbar-header
-          = link_to image_tag(asset_path('logo-white.png')), {controller: 'top'}, class: 'navbar-brand'
+          = link_to image_tag('logo-white.png'), {controller: 'top'}, class: 'navbar-brand'
         .collapse.navbar-collapse
           - if user_signed_in?
             ul.nav.navbar-nav
