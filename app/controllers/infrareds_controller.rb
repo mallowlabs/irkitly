@@ -1,5 +1,6 @@
 class InfraredsController < ApplicationController
   before_action :set_infrared, only: [:show, :edit, :update, :destroy, :post]
+  before_action :validate_user
 
   respond_to :html
 
@@ -28,7 +29,9 @@ class InfraredsController < ApplicationController
 
   def update
     @infrared.update(infrared_params)
-    respond_with(@infrared)
+    #respond_with(@infrared)
+    flash[:notice] = 'IR successfully updated.'
+    redirect_to edit_infrared_path(@infrared)
   end
 
   def destroy
@@ -38,7 +41,9 @@ class InfraredsController < ApplicationController
 
   def post
     @infrared.post
-    respond_with(@infrared)
+    flash[:notice] = 'IR successfully sent.'
+    redirect_to(:back)
+    #respond_with(@infrared)
   end
 
   private
@@ -48,5 +53,10 @@ class InfraredsController < ApplicationController
 
     def infrared_params
       params.require(:infrared).permit(:device_id, :name, :schedule, :json)
+    end
+
+    def validate_user
+      return redirect_to :root if current_user.nil?
+      return render status: 404 unless @infrared.device.user_id == current_user.id
     end
 end

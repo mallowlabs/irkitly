@@ -1,4 +1,4 @@
 class Device < ActiveRecord::Base
   belongs_to :user
-  has_many :infrareds
+  has_many :infrareds, dependent: :destroy
 end

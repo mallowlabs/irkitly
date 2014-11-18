@@ -1,5 +1,6 @@
 class DevicesController < ApplicationController
   before_action :set_device, only: [:show, :edit, :update, :destroy]
+  before_action :validate_user
 
   respond_to :html
 
@@ -50,5 +51,10 @@ class DevicesController < ApplicationController
 
     def device_params
       params.require(:device).permit(:user_id, :name, :deviceid, :clientkey)
+    end
+
+    def validate_user
+      return redirect_to :root if current_user.nil?
+      return render status: 404 if @device and @device.user_id != current_user.id
     end
 end

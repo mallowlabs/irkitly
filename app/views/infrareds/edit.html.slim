@@ -1,8 +1,23 @@
-h1 Editing infrared
+h3 IR
 
-== render 'form'
+table.table
+  tr
+    th IRKit
+    td =link_to @infrared.device.name, @infrared.device
+  tr
+    th Schedule
+    td = form_for @infrared, html: {class: 'form-inline'} do |f|
+      .form-group
+        .input-group
+          = f.label :schedule, class: 'sr-only'
+          = f.text_field :schedule, class: 'form-control', placeholder: 'Schedule'
+      =< f.submit 'Save', class: 'btn btn-primary'
+      =< link_to 'See cron format help', 'https://github.com/r7kamura/chrono/blob/master/README.md#syntax', target: '_blank'
+  tr
+    th JSON
+    td
+      pre
+        = json_pp @infrared.json
 
-= link_to 'Show', @infrared
-'|
-= link_to 'Back', infrareds_path
+= link_to 'Back to IRKit', @infrared.device, class: 'btn btn-default'
 

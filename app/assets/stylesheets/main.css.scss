@@ -1,11 +1,6 @@
 body {
   padding-top: 60px;
 }
-@media (max-width: 980px) {
-  body {
-    padding-top: 0;
-  }
-}
 
 .navbar {
   .navbar-brand {
@@ -34,4 +29,18 @@ footer {
 
 .glyphicon {
   margin-right: 5px;
+}
+
+.device-list {
+  list-style: none;
+  padding-left: 0;
+  li {
+    font-size: 1.3em;
+  }
+  ul {
+    list-style: none;
+    li {
+      font-size: 0.8em;
+    }
+  }
 }

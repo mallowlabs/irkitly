@@ -1,18 +1,42 @@
-p#notice = notice
+div
+  h3 IRKit
 
-p
-  strong User:
-  = @device.user_id
-p
-  strong Name:
-  = @device.name
-p
-  strong Deviceid:
-  = @device.deviceid
-p
-  strong Clientkey:
-  = @device.clientkey
+  table.table
+    tr
+      th Name
+      td= @device.name
+    tr
+      th Device ID
+      td= @device.deviceid
+    tr
+      th Client Key
+      td= @device.clientkey
 
-= link_to 'Edit', edit_device_path(@device)
-'|
-= link_to 'Back', devices_path
+  = link_to 'Delete this device', @device, data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-danger'
+
+br
+div
+  h4 IR
+
+  table.table.table-striped
+    thead
+      tr
+        th Name
+        th Schedule
+        th Job
+        th &nbsp;
+    tbody
+      - @device.infrareds.each do |ir|
+        tr
+          td = link_to ir.name, edit_infrared_path(ir)
+          td = ir.schedule
+          td
+            - if job_live?(ir)
+              span.label.label-success Working
+            - else
+              '&nbsp;
+          td.text-right = form_for ir, url: post_infrared_path(ir), method: 'post' do |f|
+            = f.submit 'Send IR', class: 'btn btn-primary btn-sm'
+
+= link_to 'Back to IRKit list', devices_path, class: 'btn btn-default'
+

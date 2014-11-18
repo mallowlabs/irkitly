@@ -1,27 +1,19 @@
-h1 Listing devices
+h3 Your IRKit(s)
 
-table
-  thead
-    tr
-      th User
-      th Name
-      th Deviceid
-      th Clientkey
-      th
-      th
-      th
-
-  tbody
-    - @devices.each do |device|
-      tr
-        td = device.user_id
-        td = device.name
-        td = device.deviceid
-        td = device.clientkey
-        td = link_to 'Show', device
-        td = link_to 'Edit', edit_device_path(device)
-        td = link_to 'Destroy', device, data: {:confirm => 'Are you sure?'}, :method => :delete
+ul.device-list
+  - @devices.each do |device|
+    li
+      = image_tag 'apple-touch-icon-72x72-precomposed.png', size: '20x20', alt: 'irkit'
+      '&nbsp;
+      = link_to device.name, device
+      ul
+        li
+          strong Device ID:&nbsp;
+          = device.deviceid
+        li
+          strong Client Key:&nbsp;
+          = device.clientkey
 
 br
 
-= link_to 'New Device', new_device_path
+= link_to 'Put new .irkit.json', new_device_path, class: 'btn btn-default'
