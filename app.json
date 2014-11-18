@@ -1,0 +1,36 @@
+{
+  "name": "IRKitly",
+  "description": "A web interface for IRKit",
+  "repository": "https://github.com/mallowlabs/irkitly/",
+  "logo": "https://raw.githubusercontent.com/mallowlabs/irkitly/master/app/assets/images/apple-touch-icon-precomposed.png",
+  "env": {
+    "OMNIAUTH_PROVIDER": {
+      "description": "OmniAuth provider name (now support only github)",
+      "value": "github",
+      "required": true
+    },
+    "OMNIAUTH_ARGS": {
+      "description": "OmniAuth arguments",
+      "value": "[GITHUB_API_KEY, GITHUB_SECRET]",
+      "required": true
+    },
+    "DEVISE_SECRET_KEY": {
+      "generator": "secret"
+    },
+    "SECRET_KEY_BASE": {
+      "generator": "secret"
+    },
+    "TZ": {
+      "description": "Timezone (e.g. Asia/Tokyo)",
+      "value": "UTC",
+      "required": false
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate RAILS_ENV=production"
+  }
+}
+

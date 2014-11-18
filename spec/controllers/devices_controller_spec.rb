@@ -52,13 +52,6 @@ RSpec.describe DevicesController, :type => :controller do
     end
   end
 
-  describe "GET new" do
-    it "assigns a new device as @device" do
-      get :new, {}, valid_session
-      expect(assigns(:device)).to be_a_new(Device)
-    end
-  end
-
   describe "GET edit" do
     it "assigns the requested device as @device" do
       device = Device.create! valid_attributes

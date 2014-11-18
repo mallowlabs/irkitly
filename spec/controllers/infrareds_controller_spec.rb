@@ -52,13 +52,6 @@ RSpec.describe InfraredsController, :type => :controller do
     end
   end
 
-  describe "GET new" do
-    it "assigns a new infrared as @infrared" do
-      get :new, {}, valid_session
-      expect(assigns(:infrared)).to be_a_new(Infrared)
-    end
-  end
-
   describe "GET edit" do
     it "assigns the requested infrared as @infrared" do
       infrared = Infrared.create! valid_attributes
