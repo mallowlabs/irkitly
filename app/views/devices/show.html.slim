@@ -1,29 +1,29 @@
 div
-  h3 IRKit
+  h3 = t(:device_show_title)
 
   table.table
     tr
-      th Name
+      th= t(:device_show_name)
       td= @device.name
     tr
-      th Device ID
+      th= t(:device_show_device_id)
       td= @device.deviceid
     tr
-      th Client Key
+      th= t(:device_show_client_key)
       td= @device.clientkey
 
-  = link_to 'Delete this device', @device, data: {confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-danger'
+  = link_to t(:device_show_delete_this_irkit), @device, data: {confirm: t(:device_show_delete_confirm)}, method: :delete, class: 'btn btn-danger'
 
 br
 div
-  h4 IR
+  h4 = t(:device_show_ir)
 
   table.table.table-striped
     thead
       tr
-        th Name
-        th Schedule
-        th Job
+        th = t(:device_show_ir_name)
+        th = t(:device_show_ir_schedule)
+        th = t(:device_show_ir_job)
         th &nbsp;
     tbody
       - @device.infrareds.each do |ir|
@@ -32,11 +32,11 @@ div
           td = ir.schedule
           td
             - if job_live?(ir)
-              span.label.label-success Working
+              span.label.label-success t(:device_show_working)
             - else
               '&nbsp;
           td.text-right = form_for ir, url: post_infrared_path(ir), method: 'post' do |f|
-            = f.submit 'Send IR', class: 'btn btn-primary btn-sm'
+            = f.submit t(:device_show_send_ir), class: 'btn btn-primary btn-sm'
 
-= link_to 'Back to IRKit list', devices_path, class: 'btn btn-default'
+= link_to t(:device_show_back_to_irkit_list), devices_path, class: 'btn btn-default'
 

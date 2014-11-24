@@ -1,30 +1,30 @@
-h3 IR
+h3 = t(:infrared_edit_title)
 
 table.table
   tr
-    th IRKit
+    th = t(:infrared_edit_irkit)
     td =link_to @infrared.device.name, @infrared.device
   tr
-    th Job
+    th = t(:infrared_edit_job)
     td
       - if job_live?(@infrared)
-       span.label.label-success Working
+       span.label.label-success =t(:infrared_edit_working)
       - else
        '&nbsp;
   tr
-    th Schedule
+    th = t(:infrared_edit_schedule)
     td = form_for @infrared, html: {class: 'form-inline'} do |f|
       .form-group
         .input-group
           = f.label :schedule, class: 'sr-only'
-          = f.text_field :schedule, class: 'form-control', placeholder: 'e.g. 0 8 * * 1-5'
-      =< f.submit 'Save', class: 'btn btn-primary'
-      =< link_to 'See cron format help', 'https://github.com/r7kamura/chrono/blob/master/README.md#syntax', target: '_blank'
+          = f.text_field :schedule, class: 'form-control', placeholder: t(:infrared_edit_schedule_placeholder)
+      =< f.submit t(:save), class: 'btn btn-primary'
+      =< link_to t(:infrared_edit_see_cron_help), 'https://github.com/r7kamura/chrono/blob/master/README.md#syntax', target: '_blank'
   tr
-    th JSON
+    th = t(:infrared_edit_json)
     td
       pre
         = json_pp @infrared.json
 
-= link_to 'Back to IRKit', @infrared.device, class: 'btn btn-default'
+= link_to t(:infrared_edit_back_to_irkit), @infrared.device, class: 'btn btn-default'
 

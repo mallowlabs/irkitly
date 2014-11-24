@@ -1,18 +1,17 @@
-h3 New IRKit
+h3 = t(:device_new_title)
 
-h4 Setup
+h4 = t(:device_new_setup)
 pre
   | $ gem install irkit
     $ irkit --device:add myhouse
 
-h4 Register new IR
+h4 = t(:device_new_register_new_ir)
 pre
-  | Send IR to IRKit here
-    $ irkit --get tv_on
+  = t(:device_new_send_ir) + "\n$ irkit --get tv_on"
 
-h4 Put your ~/.irkit.json
+h4 = t(:device_new_put_your_irkit_json)
 = form_tag(devices_path, method: 'post')
   = text_area_tag :json, nil, class: 'form-control', rows: 10
   br
-  = submit_tag 'Save', class: 'btn btn-primary'
-  =< link_to 'Cancel', devices_path, class: 'btn btn-default'
+  = submit_tag t(:save), class: 'btn btn-primary'
+  =< link_to t(:cancel), devices_path, class: 'btn btn-default'

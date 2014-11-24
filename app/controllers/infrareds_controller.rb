@@ -9,13 +9,13 @@ class InfraredsController < ApplicationController
 
   def update
     @infrared.update(infrared_params)
-    flash[:notice] = 'IR successfully updated.'
+    flash[:notice] = t(:infrared_edit_notice)
     redirect_to edit_infrared_path(@infrared)
   end
 
   def post
     @infrared.post
-    flash[:notice] = 'IR successfully sent.'
+    flash[:notice] = t(:infrared_post_notice)
     redirect_to(:back)
   end
 

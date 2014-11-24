@@ -1,4 +1,4 @@
-h3 Your IRKit(s)
+h3 = t(:device_index_title)
 
 ul.device-list
   - @devices.each do |device|
@@ -7,12 +7,12 @@ ul.device-list
       =< link_to device.name, device
       ul
         li
-          strong Device ID:
+          strong = t(:device_index_device_id)
           =< device.deviceid
         li
-          strong Client Key:
+          strong = t(:device_index_client_key)
           =< device.clientkey
 
 br
 
-= link_to 'Put new .irkit.json', new_device_path, class: 'btn btn-default'
+= link_to t(:device_index_put_irkit_json), new_device_path, class: 'btn btn-default'

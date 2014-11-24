@@ -1,4 +1,46 @@
 en:
+  title: IRKitly
+  top: Top
+  account: Account
+  save: Save
+  cancel: Cancel
   button_sign_in: Sign in with GitHub
   button_sign_out: Sign out
   error_authentication_failed: Authentication failed
+  device_index_title: Your IRKit(s)
+  device_index_device_id: "Device ID:"
+  device_index_client_key: "Client Key:"
+  device_index_put_irkit_json: Put new .irkit.json
+  device_new_title: New IRKit
+  device_new_setup: Setup
+  device_new_register_new_ir: Register new IR
+  device_new_put_your_irkit_json: Put your ~/.irkit.json
+  device_new_send_ir: Send IR to IRKit here
+  device_show_title: IRKit
+  device_show_name: Name
+  device_show_device_id: Device ID
+  device_show_client_key: Client Key
+  device_show_delete_this_irkit: Delete this IRKit
+  device_show_delete_confirm: "Are you sure?"
+  device_show_ir: IR
+  device_show_back_to_irkit_list: Back to IRKit list
+  device_show_send_ir: Send IR
+  device_show_working: Working
+  device_show_ir_name: Name
+  device_show_ir_schedule: Schedule
+  device_show_ir_job: Job
+  device_create_notice: IRKit successfully registered.
+  device_destroy_notice: IRKit successfully deleted.
+  device_index_notice: You need to register your IRKit first.
+  infrared_edit_title: IR
+  infrared_edit_irkit: IRKit
+  infrared_edit_job: Job
+  infrared_edit_working: Working
+  infrared_edit_schedule: Schedule
+  infrared_edit_schedule_placeholder: "e.g. 0 8 * * 1-5"
+  infrared_edit_see_cron_help: See cron format help
+  infrared_edit_json: JSON
+  infrared_edit_back_to_irkit: Back to IRKit
+  infrared_edit_notice: IR successfully updated.
+  infrared_post_notice: IR successfully sent.
+
