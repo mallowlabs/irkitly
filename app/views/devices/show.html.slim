@@ -32,7 +32,7 @@ div
           td = ir.schedule
           td
             - if job_live?(ir)
-              span.label.label-success t(:device_show_working)
+              span.label.label-success = t(:device_show_working)
             - else
               '&nbsp;
           td.text-right = form_for ir, url: post_infrared_path(ir), method: 'post' do |f|
