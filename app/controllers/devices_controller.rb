@@ -6,6 +6,7 @@ class DevicesController < ApplicationController
 
   def index
     @devices = current_user.devices
+    return redirect_to new_device_path, notice: 'You need to register your IRKit first.' if @devices.empty?
     respond_with(@devices)
   end
 
@@ -26,11 +27,13 @@ class DevicesController < ApplicationController
       infrared
     end
     @device.save
+    flash[:notice] = 'IRKit successfully register.'
     respond_with(@device)
   end
 
   def destroy
     @device.destroy
+    flash[:notice] = 'IRKit successfully deleted.'
     respond_with(@device)
   end
 
