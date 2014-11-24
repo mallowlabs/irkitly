@@ -13,4 +13,13 @@
  *= require_tree .
  *= require_self
  */
+// Using 'Yeti' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/yeti/variables";
+
+// Then bootstrap itself
 @import "bootstrap";
+
+// And finally bootswatch style itself
+@import "bootswatch/yeti/bootswatch";

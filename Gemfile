@@ -54,6 +54,7 @@ gem "omniauth-twitter"
 gem "omniauth-github"
 gem "dotenv-rails"
 gem "bootstrap-sass", "~> 3.0.3.0"
+gem "bootswatch-rails"
 gem "thin"
 
 gem 'heroku-rack-ssl-enforcer-rails'
