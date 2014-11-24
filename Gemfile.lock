@@ -88,6 +88,7 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    newrelic_rpm (3.9.7.266)
     oauth (0.4.7)
     oauth2 (1.0.0)
       faraday (>= 0.8, < 0.10)
@@ -216,6 +217,7 @@ DEPENDENCIES
   heroku-rack-ssl-enforcer-rails
   jbuilder (~> 2.0)
   jquery-rails
+  newrelic_rpm
   omniauth
   omniauth-github
   omniauth-twitter

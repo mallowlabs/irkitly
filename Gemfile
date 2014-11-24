@@ -56,6 +56,7 @@ gem "dotenv-rails"
 gem "bootstrap-sass", "~> 3.0.3.0"
 gem "bootswatch-rails"
 gem "thin"
+gem "newrelic_rpm"
 
 gem 'heroku-rack-ssl-enforcer-rails'
 gem 'chrono_cross', :github => 'mallowlabs/chrono_cross'
