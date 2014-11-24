@@ -15,7 +15,11 @@ html
       .container
         .navbar-header
           = link_to image_tag('logo-white.png'), {controller: 'top'}, class: 'navbar-brand'
-        .collapse.navbar-collapse
+          button.navbar-toggle type='button' data-toggle='collapse' data-target='#nav-content'
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        #nav-content.collapse.navbar-collapse
           - if user_signed_in?
             ul.nav.navbar-nav
               li= link_to "Top", controller: :top
@@ -37,4 +41,4 @@ html
       = yield
 
       footer
-        p &copy; mallowlabs
+        p &copy; 2014 mallowlabs
