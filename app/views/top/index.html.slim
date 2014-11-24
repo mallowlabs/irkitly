@@ -1,8 +1,8 @@
 .jumbotron
   .content
     .text-center
-      h1 IRKitly
-      h2 A web interface for IRKit
+      h1 = t(:title)
+      h2 = t(:sub_title)
       = form_tag user_omniauth_authorize_path(DotenvConfig.omniauth_provider), method: 'post' do
         button.btn.btn-primary.btn-large
           span.glyphicon.glyphicon-log-in
