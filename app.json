@@ -11,7 +11,7 @@
     },
     "OMNIAUTH_ARGS": {
       "description": "OmniAuth arguments",
-      "value": "['GITHUB_API_KEY', 'GITHUB_SECRET']",
+      "value": '["GITHUB_API_KEY", "GITHUB_SECRET"]',
       "required": true
     },
     "DEVISE_SECRET_KEY": {
