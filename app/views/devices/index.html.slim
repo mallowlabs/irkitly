@@ -4,15 +4,14 @@ ul.device-list
   - @devices.each do |device|
     li
       = image_tag 'apple-touch-icon-72x72-precomposed.png', size: '20x20', alt: 'irkit'
-      '&nbsp;
-      = link_to device.name, device
+      =< link_to device.name, device
       ul
         li
-          strong Device ID:&nbsp;
-          = device.deviceid
+          strong Device ID:
+          =< device.deviceid
         li
-          strong Client Key:&nbsp;
-          = device.clientkey
+          strong Client Key:
+          =< device.clientkey
 
 br
 

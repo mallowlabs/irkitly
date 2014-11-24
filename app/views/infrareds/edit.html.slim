@@ -5,6 +5,13 @@ table.table
     th IRKit
     td =link_to @infrared.device.name, @infrared.device
   tr
+    th Job
+    td
+      - if job_live?(@infrared)
+       span.label.label-success Working
+      - else
+       '&nbsp;
+  tr
     th Schedule
     td = form_for @infrared, html: {class: 'form-inline'} do |f|
       .form-group
