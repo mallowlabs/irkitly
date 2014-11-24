@@ -8,7 +8,8 @@ module InfraredChronoCross
 
   private
     def register_chrono_cross
-      ChronoCross::JobManager.register(id.to_s, schedule, IrkitJob, id) unless schedule.blank?
+      return unregister_chrono_cross if schedule.blank?
+      ChronoCross::JobManager.register(id.to_s, schedule, IrkitJob, id)
     end
 
     def unregister_chrono_cross

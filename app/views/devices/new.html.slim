@@ -1,4 +1,14 @@
-h3 New device
+h3 New IRKit
+
+h4 Setup
+pre
+  | $ gem install irkit
+    $ irkit --device:add myhouse
+
+h4 Register new IR
+pre
+  | Send IR to IRKit here
+    $ irkit --get tv_on
 
 h4 Put your ~/.irkit.json
 = form_tag(devices_path, method: 'post')

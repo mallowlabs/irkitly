@@ -10,7 +10,7 @@ table.table
       .form-group
         .input-group
           = f.label :schedule, class: 'sr-only'
-          = f.text_field :schedule, class: 'form-control', placeholder: 'Schedule'
+          = f.text_field :schedule, class: 'form-control', placeholder: 'e.g. 0 8 * * 1-5'
       =< f.submit 'Save', class: 'btn btn-primary'
       =< link_to 'See cron format help', 'https://github.com/r7kamura/chrono/blob/master/README.md#syntax', target: '_blank'
   tr
