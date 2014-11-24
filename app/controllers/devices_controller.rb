@@ -1,5 +1,5 @@
 class DevicesController < ApplicationController
-  before_action :set_device, only: [:show, :edit, :update, :destroy]
+  before_action :set_device, only: [:show, :destroy]
   before_action :validate_user
 
   respond_to :html
@@ -14,11 +14,6 @@ class DevicesController < ApplicationController
   end
 
   def new
-#    @device = Device.new
-#    respond_with(@device)
-  end
-
-  def edit
   end
 
   def create
@@ -34,11 +29,6 @@ class DevicesController < ApplicationController
     respond_with(@device)
   end
 
-  def update
-    @device.update(device_params)
-    respond_with(@device)
-  end
-
   def destroy
     @device.destroy
     respond_with(@device)
@@ -47,10 +37,6 @@ class DevicesController < ApplicationController
   private
     def set_device
       @device = Device.find(params[:id])
-    end
-
-    def device_params
-      params.require(:device).permit(:user_id, :name, :deviceid, :clientkey)
     end
 
     def validate_user
