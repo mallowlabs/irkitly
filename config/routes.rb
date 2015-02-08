@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :infrareds do
+  resources :infrareds, only: [:edit, :update] do
     member do
       post "post", action: 'post', as: :post
     end
   end
 
-  resources :devices
+  resources :devices, except: [:edit, :update]
 
   root to: 'top#index'
   devise_for :users, controllers: { omniauth_callbacks: 'authentication' }

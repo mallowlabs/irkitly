@@ -15,16 +15,8 @@ RSpec.describe DevicesController, :type => :routing do
       expect(:get => "/devices/1").to route_to("devices#show", :id => "1")
     end
 
-    it "routes to #edit" do
-      expect(:get => "/devices/1/edit").to route_to("devices#edit", :id => "1")
-    end
-
     it "routes to #create" do
       expect(:post => "/devices").to route_to("devices#create")
-    end
-
-    it "routes to #update" do
-      expect(:put => "/devices/1").to route_to("devices#update", :id => "1")
     end
 
     it "routes to #destroy" do
