@@ -12,9 +12,6 @@ div
       th= t(:device_show_client_key)
       td= @device.clientkey
 
-  = link_to t(:device_show_delete_this_irkit), @device, data: {confirm: t(:device_show_delete_confirm)}, method: :delete, class: 'btn btn-danger'
-
-br
 div
   h4 = t(:device_show_ir)
 
@@ -38,5 +35,8 @@ div
           td.text-right = form_for ir, url: post_infrared_path(ir), method: 'post' do |f|
             = f.submit t(:device_show_send_ir), class: 'btn btn-primary btn-sm'
 
-= link_to t(:device_show_back_to_irkit_list), devices_path, class: 'btn btn-default'
+=> link_to t(:device_show_back_to_irkit_list), devices_path, class: 'btn btn-default'
+= link_to t(:device_show_delete_this_irkit), @device, data: {confirm: t(:device_show_delete_confirm)}, method: :delete, class: 'btn btn-danger'
+
+br
 
