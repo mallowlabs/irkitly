@@ -23,20 +23,11 @@ bundle exec rake secret
 
 #### OMNIAUTH\_PROVIDER, OMNIAUTH\_ARGS
 
-For example, omniauth-github needs an initializer as follows:
-```ruby
-Devise.setup do |config|
-  config.omniauth :github, 'GITHUB_API_KEY', 'GITHUB_SECRET'
-end
-```
-
-then you should set environment variables as follows:
+You need to set environment variables as follows:
 ```
 OMNIAUTH_PROVIDER=github
 OMNIAUTH_ARGS="['GITHUB_API_KEY','GITHUB_SECRET']"
 ```
-
-See [config/initializers/devise.rb](https://github.com/codefirst/vertex/blob/master/config/initializers/devise.rb)
 
 #### run
 
