@@ -13,27 +13,27 @@
 
 ActiveRecord::Schema.define(version: 20141116134054) do
 
-  create_table "devices", force: true do |t|
+  create_table "devices", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "name"
-    t.string   "deviceid"
-    t.string   "clientkey"
+    t.string   "name",       limit: 255
+    t.string   "deviceid",   limit: 255
+    t.string   "clientkey",  limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "infrareds", force: true do |t|
+  create_table "infrareds", force: :cascade do |t|
     t.integer  "device_id"
-    t.string   "name"
-    t.string   "schedule"
+    t.string   "name",       limit: 255
+    t.string   "schedule",   limit: 255
     t.text     "json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
-    t.string   "nickname",   null: false
-    t.string   "name",       null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "nickname",   limit: 255, null: false
+    t.string   "name",       limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

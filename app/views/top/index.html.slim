@@ -3,7 +3,7 @@
     .text-center
       h1 = t(:title)
       h2 = t(:sub_title)
-      = form_tag user_omniauth_authorize_path(DotenvConfig.omniauth_provider), method: 'post' do
+      = form_tag user_github_omniauth_authorize_path, method: 'post' do
         button.btn.btn-primary.btn-large
           span.glyphicon.glyphicon-log-in
           = t(:button_sign_in)
