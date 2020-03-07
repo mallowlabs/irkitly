@@ -43,9 +43,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     arel (6.0.4)
+    autoprefixer-rails (9.7.4)
+      execjs
     bcrypt (3.1.13)
-    bootstrap-sass (3.0.3.0)
-      sass (~> 3.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     bootswatch-rails (3.3.5)
       railties (>= 3.1)
     builder (3.2.4)
@@ -78,6 +81,7 @@ GEM
     execjs (2.7.0)
     faraday (1.0.0)
       multipart-post (>= 1.2, < 3)
+    ffi (1.12.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashie (3.6.0)
@@ -191,6 +195,8 @@ GEM
       sass (~> 3.2.2)
       sprockets (~> 2.8, < 3.0)
       sprockets-rails (~> 2.0)
+    sassc (2.2.1)
+      ffi (~> 1.9)
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -239,7 +245,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (~> 3.0.3.0)
+  bootstrap-sass (~> 3.4.1)
   bootswatch-rails
   chrono_cross!
   coffee-rails (~> 4.0.0)
