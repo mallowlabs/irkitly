@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/mallowlabs/chrono_cross.git
+  remote: https://github.com/mallowlabs/chrono_cross.git
   revision: b542bf091f86d948776c88d144766e84aa167987
   specs:
     chrono_cross (0.0.1)
@@ -224,7 +224,7 @@ GEM
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    tzinfo (1.2.6)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
